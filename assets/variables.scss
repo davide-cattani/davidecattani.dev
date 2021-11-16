@@ -2,3 +2,41 @@
 //
 // The variables you want to modify
 // $font-size-root: 20px;
+
+a {
+  text-decoration: none;
+}
+
+.text-small {
+  font-size: 0.9rem;
+}
+.text-large {
+  font-size: 0.9rem !important;
+}
+@media screen and (min-width: 1040px) {
+  .text-small {
+    font-size: 0.8rem;
+  }
+  .text-large {
+    font-size: 1.1rem !important;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .text-large {
+    font-size: 1.2rem !important;
+  }
+}
+
+.hover-pointer:hover {
+  cursor: pointer;
+}
+
+pre {
+  font-size: 0.9em !important;
+}
+
+@media screen and (min-width: 960px) {
+  .container.article {
+    max-width: 880px;
+  }
+}

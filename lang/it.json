@@ -1,0 +1,19 @@
+{
+  "about": "Su di me",
+  "back": "Indietro",
+  "cancel": "Annulla",
+  "contactMe": "Contattami",
+  "footer_1": "Fatto con il ",
+  "footer_2": " da ",
+  "loadMore": "carica altri",
+  "send": "Invia",
+  "thanksForContact": "Grazie per avermi contattato!",
+
+  "form": {
+    "name": "Nome",
+    "email": "Email",
+    "message": "Messaggio",
+    "privacy": "Autorizzo il trattamento dei dati personali secondo la "
+  }
+
+}

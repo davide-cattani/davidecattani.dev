@@ -1,0 +1,18 @@
+{
+  "about": "About",
+  "back": "Back",
+  "cancel": "Cancel",
+  "contactMe": "Contact Me",
+  "footer_1": "Made with ",
+  "footer_2": " by ",
+  "loadMore": "load more",
+  "send": "Send",
+  "thanksForContact": "Thanks for contacting me!",
+
+  "form": {
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "privacy": "I agree to the "
+  }
+}
