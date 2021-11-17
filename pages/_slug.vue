@@ -9,8 +9,9 @@
     <div class="mt-16 pt-16">
       <div class="mx-auto">
         <p>Was it useful?</p>
-        <a class="blue--text" href="https://www.buymeacoffee.com/davidecattani">Buy me a coffee :)</a
-        >
+        <a class="blue--text" href="https://www.buymeacoffee.com/davidecattani">
+          Buy me a coffee :)
+        </a>
       </div>
     </div>
   </v-container>
@@ -24,6 +25,19 @@ export default {
     return {
       post,
       date
+    }
+  },
+  head () {
+    return {
+      title: 'Davide Cattani | ' + this.post.title,
+      meta: [
+        // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.post.description
+        }
+      ]
     }
   }
 }

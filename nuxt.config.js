@@ -7,13 +7,13 @@ export default {
   target: 'static',
 
   // Global page headers: https://go.nuxtjs.dev/config-head
-  head() {
+  head () {
     const i18nHead = this.$nuxtI18nHead ? this.$nuxtI18nHead({ addSeoAttributes: true }) : { htmlAttrs: [], meta: [], link: [] }
     return {
       htmlAttrs: {
         ...i18nHead.htmlAttrs
       },
-      title: 'Davide Cattani',
+      title: 'Davide Cattani | Web Developer',
       meta: [
         {
           hid: 'description',

@@ -3,9 +3,9 @@
     <v-col cols="12" md="6" class="px-md-16">
       <v-card dark elevation="6" rounded="lg" class="pa-2">
         <v-card-title>
-          <span class="dot red lighten-1"></span>
-          <span class="dot yellow"></span>
-          <span class="dot green"></span>
+          <span class="dot red lighten-1" />
+          <span class="dot yellow" />
+          <span class="dot green" />
         </v-card-title>
         <v-card-text class="text-large mt-4">
           <p>
@@ -17,7 +17,7 @@
             <span>whoami</span>
           </p>
           <p>
-            <span> </span>
+            <span />
             <span class="font-weight-medium">Web Developer</span>
           </p>
           <p>
@@ -29,8 +29,9 @@
             <a
               href="https://www.studioilgranello.it"
               class="text--white font-weight-medium"
-              >Studio il Granello</a
             >
+              Studio il Granello
+            </a>
             <!-- <span> &#60;</span> -->
           </p>
           <p>
@@ -39,24 +40,31 @@
           </p>
           <p>
             <span>> </span>
-            <span
-              class="font-weight-medium hover-pointer"
-              @mouseover="pic = true"
-              @mouseleave="pic = false"
-              >photo.jpg</span
-            >
+            <v-tooltip top content-class="full-opacity pa-0">
+              <template #activator="{ on, attrs }">
+                <span
+                  class="font-weight-medium hover-pointer"
+                  v-bind="attrs"
+                  v-on="on"
+                >
+                  photo.jpg
+                </span>
+              </template>
+              <v-img
+                max-height="180"
+                max-width="180"
+                :src="'/avatar.jpg'"
+                class="mx-auto"
+              />
+            </v-tooltip>
             <!-- <span> &#60;</span> -->
+          </p>
+          <p>
+            <span class="green--text text--accent-3">davide-cattani$ </span>
+            <span v-show="input">|</span>
           </p>
         </v-card-text>
       </v-card>
-      <div v-if="pic" class="mt-16">
-        <v-img
-          max-height="160"
-          max-width="160"
-          :src="'/foto.jpg'"
-          class="mx-auto"
-        />
-      </div>
     </v-col>
     <v-col cols="12" md="6" class="px-8">
       <h2 class="mb-4">My blog:</h2>
@@ -94,7 +102,7 @@ export default {
   },
   data () {
     return {
-      pic: false
+      input: true
     }
   },
   head () {
@@ -102,6 +110,17 @@ export default {
       script: [
         { src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }
       ]
+    }
+  },
+  mounted () {
+    this.onSwitchInput()
+  },
+  methods: {
+    onSwitchInput () {
+      setTimeout(() => {
+        this.input = !this.input
+        this.onSwitchInput()
+      }, 500)
     }
   }
 }
