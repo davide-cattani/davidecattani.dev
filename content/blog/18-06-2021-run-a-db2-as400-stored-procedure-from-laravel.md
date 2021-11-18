@@ -1,6 +1,8 @@
 ---
 title: Run a DB2 / AS400 stored procedure from laravel
 date: 2021-06-18T19:15:00.000Z
+tags:
+  - Laravel
 description: If you need to launch a stored procedure of an IBM i DB2 / AS400
   database from laravel, chances are you are encountering some errors and can't
   find solutions.   This quick guide may help you :)

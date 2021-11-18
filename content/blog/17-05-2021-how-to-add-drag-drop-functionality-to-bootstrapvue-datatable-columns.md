@@ -1,6 +1,9 @@
 ---
 title: How to add drag&drop functionality to BootstrapVue DataTable columns
 date: 2021-05-17T16:54:00.000Z
+tags:
+  - Vue.js
+  - BootstrapVue
 description: "Here is a quick guide of how to add a drag&drop functionality to
   the columns\r of a vue.js bootstrapvue data table (<b-table>). I couldn't find
   any working\r example on the internet, so here it goes."

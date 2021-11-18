@@ -1,6 +1,9 @@
 ---
 title: Nice and clean file upload modal window made with vue + bootstrapvue
 date: 2021-05-25T17:04:00.000Z
+tags:
+  - Vue.js
+  - BootstrapVue
 description: A simple file upload modal window i built using Vue.js and
   bootstrapvue for styling. Features multiple file upload and file rename
   functionalities.
