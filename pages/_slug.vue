@@ -3,7 +3,8 @@
     <article>
       <h1 class="mb-2">{{ post.title }}</h1>
       <h3 class="font-italic mb-4">{{ date }}</h3>
-      <hr class="mb-4" />
+      <article-tags :tags="post.tags" />
+      <hr class="my-4" />
       <nuxt-content :document="post" />
     </article>
     <div class="mt-16 pt-16">
@@ -18,7 +19,10 @@
 </template>
 
 <script>
+import ArticleTags from '@/components/ArticleTags.vue'
+
 export default {
+  components: { ArticleTags },
   async asyncData ({ $content, params, i18n }) {
     const post = await $content('blog/' + params.slug).fetch()
     const date = new Date(post.date).toLocaleDateString(i18n.getBrowserLocale)

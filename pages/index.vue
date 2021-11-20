@@ -68,20 +68,24 @@
     </v-col>
     <v-col cols="12" md="6" class="px-8">
       <h2 class="mb-4">My blog:</h2>
-      <div class="">
-        <article v-for="post in posts" :key="post.slug">
+      <template>
+        <article v-for="post in posts" :key="post.slug" class="article-item mb-6">
           <nuxt-link :to="post.slug">
             <h3>{{ post.title }}</h3>
+            <article-tags :tags="post.tags" />
             <p class="text-small">{{ post.description }}</p>
           </nuxt-link>
         </article>
-      </div>
+      </template>
     </v-col>
   </v-row>
 </template>
 
 <script>
+import ArticleTags from '@/components/ArticleTags.vue'
+
 export default {
+  components: { ArticleTags },
   async asyncData ({ $content }) {
     const last = await $content('blog')
       .sortBy('date', 'desc')
