@@ -35,8 +35,14 @@ a {
   cursor: pointer;
 }
 
+p code {
+  background-color: rgba(0, 0, 0, 0.12) !important;
+  font-size: 0.92rem !important;
+}
+
 pre {
   font-size: 0.9em !important;
+  margin: 1.25rem 0 !important;
 }
 
 @media screen and (min-width: 960px) {

@@ -7,8 +7,8 @@
       <hr class="my-4" />
       <nuxt-content :document="post" />
     </article>
-    <div class="mt-16 pt-16">
-      <div class="mx-auto">
+    <div class="my-16 pt-16">
+      <div class="mx-auto text-center">
         <p>Was it useful?</p>
         <a class="blue--text" href="https://www.buymeacoffee.com/davidecattani">
           Buy me a coffee :)
